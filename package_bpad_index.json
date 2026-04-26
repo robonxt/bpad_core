@@ -1,0 +1,133 @@
+{
+  "packages": [
+    {
+      "name": "bpad",
+      "maintainer": "robonxt",
+      "websiteURL": "https://github.com/robonxt/bpad_core",
+      "email": "",
+      "help": {
+        "online": "https://github.com/robonxt/bpad_core/discussions"
+      },
+      "platforms": [
+        {
+          "name": "bpad core",
+          "architecture": "esp32",
+          "version": "2.0.17",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/robonxt/bpad_core/discussions"
+          },
+          "url": "https://github.com/robonxt/bpad_core/releases/download/v2.0.17/bpad_core-2.0.17.zip",
+          "archiveFileName": "bpad_core-2.0.17.zip",
+          "checksum": "SHA-256:0000000000000000000000000000000000000000000000000000000000000000",
+          "size": "0",
+          "boards": [
+            {
+              "name": "bpad proto1"
+            },
+            {
+              "name": "bpad proto2 (2vib)"
+            },
+            {
+              "name": "bpad proto3 (4vib)"
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "esp32",
+              "name": "xtensa-esp32s3-elf-gcc",
+              "version": "esp-2021r2-patch5-8.4.0"
+            },
+            {
+              "packager": "esp32",
+              "name": "esptool_py",
+              "version": "4.5.1"
+            },
+            {
+              "packager": "esp32",
+              "name": "xtensa-esp-elf-gdb",
+              "version": "11.2_20220823"
+            }
+          ]
+        },
+        {
+          "name": "bpad core",
+          "architecture": "esp32",
+          "version": "3.3.5",
+          "category": "Contributed",
+          "help": {
+            "online": "https://github.com/robonxt/bpad_core/discussions"
+          },
+          "url": "https://github.com/robonxt/bpad_core/releases/download/v3.3.5/bpad_core-3.3.5.zip",
+          "archiveFileName": "bpad_core-3.3.5.zip",
+          "checksum": "SHA-256:0000000000000000000000000000000000000000000000000000000000000000",
+          "size": "0",
+          "boards": [
+            {
+              "name": "bpad proto1"
+            },
+            {
+              "name": "bpad proto2 (2vib)"
+            },
+            {
+              "name": "bpad proto3 (4vib)"
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "esp32",
+              "name": "esp32-arduino-libs",
+              "version": "idf-release_v5.5-9bb7aa84-v2"
+            },
+            {
+              "packager": "esp32",
+              "name": "esp-x32",
+              "version": "2511"
+            },
+            {
+              "packager": "esp32",
+              "name": "xtensa-esp-elf-gdb",
+              "version": "16.3_20250913"
+            },
+            {
+              "packager": "esp32",
+              "name": "esp-rv32",
+              "version": "2511"
+            },
+            {
+              "packager": "esp32",
+              "name": "riscv32-esp-elf-gdb",
+              "version": "16.3_20250913"
+            },
+            {
+              "packager": "esp32",
+              "name": "openocd-esp32",
+              "version": "v0.12.0-esp32-20250707"
+            },
+            {
+              "packager": "esp32",
+              "name": "esptool_py",
+              "version": "5.1.0"
+            },
+            {
+              "packager": "esp32",
+              "name": "mkspiffs",
+              "version": "0.2.3"
+            },
+            {
+              "packager": "esp32",
+              "name": "mklittlefs",
+              "version": "4.0.2-db0513a"
+            },
+            {
+              "packager": "arduino",
+              "name": "dfu-util",
+              "version": "0.11.0-arduino5"
+            }
+          ]
+        }
+      ],
+      "tools": []
+    }
+  ]
+}

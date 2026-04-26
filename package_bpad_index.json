@@ -6,7 +6,7 @@
       "websiteURL": "https://github.com/robonxt/bpad_core",
       "email": "",
       "help": {
-        "online": "https://github.com/robonxt/bpad_core/discussions"
+        "online": "https://github.com/robonxt/bpad_core/issues"
       },
       "platforms": [
         {
@@ -19,8 +19,8 @@
           },
           "url": "https://github.com/robonxt/bpad_core/releases/download/v2.0.17/bpad_core-2.0.17.zip",
           "archiveFileName": "bpad_core-2.0.17.zip",
-          "checksum": "SHA-256:0000000000000000000000000000000000000000000000000000000000000000",
-          "size": "0",
+          "checksum": "SHA-256:5aa45b658021e3a0ad5ae7f36e6bce4c397c436ca24b440a2840d6decc497250",
+          "size": "253808075",
           "boards": [
             {
               "name": "bpad proto1"
@@ -56,12 +56,12 @@
           "version": "3.3.5",
           "category": "Contributed",
           "help": {
-            "online": "https://github.com/robonxt/bpad_core/discussions"
+            "online": "https://github.com/robonxt/bpad_core/issues"
           },
           "url": "https://github.com/robonxt/bpad_core/releases/download/v3.3.5/bpad_core-3.3.5.zip",
           "archiveFileName": "bpad_core-3.3.5.zip",
-          "checksum": "SHA-256:0000000000000000000000000000000000000000000000000000000000000000",
-          "size": "0",
+          "checksum": "SHA-256:e2cdda5fdf93c83176638145ebf1d2e126d3503b44f6e1fef9bcfa4a44bb0370",
+          "size": "26966546",
           "boards": [
             {
               "name": "bpad proto1"

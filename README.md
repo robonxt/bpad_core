@@ -11,6 +11,18 @@ It includes support for the following boards:
 - `bpad proto2 (2vib)` (16MB Flash)
 - `bpad proto3 (4vib)` (16MB Flash)
 
+## Quick Install (Arduino IDE)
+
+1. Open **File → Preferences** in the Arduino IDE.
+2. Add this URL to **Additional Board Manager URLs**:
+   ```
+   https://raw.githubusercontent.com/robonxt/bpad_core/main/package_bpad_index.json
+   ```
+3. Open **Tools → Board → Boards Manager**.
+4. Search for **"bpad"** and install the latest version.
+5. Select your board from **Tools → Board → bpad core → [Your Board]**.
+6. (Optional) You can use the **Version** dropdown in the Boards Manager to switch between ESP32 v2.0.17 and v3.3.5.
+
 ## Repository Structure
 
 To keep this repository lightweight, the actual ESP32 Arduino Core source files are **not** stored here. Instead, we use python scripts to download the cores from Espressif and inject our custom modifications.
@@ -68,3 +80,6 @@ If Espressif releases a new core version (e.g., `3.5.0` or `4.0.0`) and you want
    - Update the `"url"` and `"archiveFileName"` to point to the new `bpad_core-4.0.0.zip`.
    - **Crucially**: Ensure the `toolsDependencies` list matches the exact toolchain versions required by the new core. You can find these tool dependencies by inspecting Espressif's official `package_esp32_index.json` for that version.
 3. Run `setup.py` and `build.py` to generate the new zip, update the checksums in the JSON, and deploy your release.
+
+
+Credits: @robonxt & Antigravity

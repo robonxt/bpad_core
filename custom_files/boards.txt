@@ -322,8 +322,8 @@ bpad_proto2.menu.USBMode.default.build.usb_mode=0
 
 bpad_proto2.menu.CDCOnBoot.default=Enabled
 bpad_proto2.menu.CDCOnBoot.default.build.cdc_on_boot=1
-bpad_proto2.menu.CDCOnBoot.cdc=Enabled
-bpad_proto2.menu.CDCOnBoot.cdc.build.cdc_on_boot=1
+bpad_proto2.menu.CDCOnBoot.disabled=Disabled
+bpad_proto2.menu.CDCOnBoot.disabled.build.cdc_on_boot=0
 
 bpad_proto2.menu.MSCOnBoot.default=Disabled
 bpad_proto2.menu.MSCOnBoot.default.build.msc_on_boot=0
@@ -500,8 +500,8 @@ bpad_proto3.menu.USBMode.default.build.usb_mode=0
 
 bpad_proto3.menu.CDCOnBoot.default=Enabled
 bpad_proto3.menu.CDCOnBoot.default.build.cdc_on_boot=1
-bpad_proto3.menu.CDCOnBoot.cdc=Enabled
-bpad_proto3.menu.CDCOnBoot.cdc.build.cdc_on_boot=1
+bpad_proto3.menu.CDCOnBoot.disabled=Disabled
+bpad_proto3.menu.CDCOnBoot.disabled.build.cdc_on_boot=0
 
 bpad_proto3.menu.MSCOnBoot.default=Disabled
 bpad_proto3.menu.MSCOnBoot.default.build.msc_on_boot=0
@@ -695,8 +695,6 @@ bpad_185.menu.USBMode.default.build.usb_mode=0
 ## CDC On Boot
 bpad_185.menu.CDCOnBoot.default=Enabled
 bpad_185.menu.CDCOnBoot.default.build.cdc_on_boot=1
-bpad_185.menu.CDCOnBoot.cdc=Enabled
-bpad_185.menu.CDCOnBoot.cdc.build.cdc_on_boot=1
 bpad_185.menu.CDCOnBoot.disabled=Disabled
 bpad_185.menu.CDCOnBoot.disabled.build.cdc_on_boot=0
 

@@ -10,6 +10,7 @@ It includes support for the following boards:
 - `bpad proto1` (4MB Flash)
 - `bpad proto2 (2vib)` (16MB Flash)
 - `bpad proto3 (4vib)` (16MB Flash)
+- `bpad 1.85"` (16MB Flash)
 
 ## Quick Install (Arduino IDE)
 

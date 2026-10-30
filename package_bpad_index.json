@@ -60,8 +60,8 @@
           },
           "url": "https://github.com/robonxt/bpad_core/releases/download/v3.3.5/bpad_core-3.3.5.zip",
           "archiveFileName": "bpad_core-3.3.5.zip",
-          "checksum": "SHA-256:e2cdda5fdf93c83176638145ebf1d2e126d3503b44f6e1fef9bcfa4a44bb0370",
-          "size": "26966546",
+          "checksum": "SHA-256:65b6e3c389f0d8c8cc8b789912715aed9dd6bda026aae7e620037279b37425bf",
+          "size": "26968349",
           "boards": [
             {
               "name": "bpad proto1"
@@ -71,6 +71,9 @@
             },
             {
               "name": "bpad proto3 (4vib)"
+            },
+            {
+              "name": "bpad 1.85\""
             }
           ],
           "toolsDependencies": [

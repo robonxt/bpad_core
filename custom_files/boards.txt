@@ -567,3 +567,205 @@ bpad_proto3.menu.EraseFlash.all=Enabled
 bpad_proto3.menu.EraseFlash.all.upload.erase_cmd=-e
 
 ##############################################################
+
+
+##############################################################
+##############################################################
+# bpad 1.85"
+# ESP32-S3 / 16MB Flash / OPI PSRAM / 360x360 QSPI Touchscreen
+##############################################################
+
+bpad_185.name=bpad 1.85"
+
+bpad_185.bootloader.tool=esptool_py
+bpad_185.bootloader.tool.default=esptool_py
+
+bpad_185.upload.tool=esptool_py
+bpad_185.upload.tool.default=esptool_py
+bpad_185.upload.tool.network=esp_ota
+
+bpad_185.upload.maximum_size=4145728
+bpad_185.upload.maximum_data_size=327680
+bpad_185.upload.flags=
+bpad_185.upload.extra_flags=
+bpad_185.upload.use_1200bps_touch=false
+bpad_185.upload.wait_for_upload_port=false
+
+bpad_185.serial.disableDTR=false
+bpad_185.serial.disableRTS=false
+
+bpad_185.build.tarch=xtensa
+bpad_185.build.bootloader_addr=0x0
+bpad_185.build.target=esp32s3
+bpad_185.build.mcu=esp32s3
+bpad_185.build.core=esp32
+bpad_185.build.variant=bpad_185
+bpad_185.build.board=BPAD_185
+
+bpad_185.build.usb_mode=1
+bpad_185.build.cdc_on_boot=1
+bpad_185.build.msc_on_boot=0
+bpad_185.build.dfu_on_boot=0
+bpad_185.build.f_cpu=240000000L
+
+bpad_185.build.flash_size=16MB
+bpad_185.build.flash_freq=80m
+bpad_185.build.flash_mode=dio
+bpad_185.build.boot=qio
+bpad_185.build.boot_freq=80m
+
+bpad_185.build.partitions=bpad_16MB_4GB
+bpad_185.build.defines=-DBOARD_HAS_PSRAM
+bpad_185.build.loop_core=
+bpad_185.build.event_core=
+
+bpad_185.build.psram_type=opi
+bpad_185.build.memory_type={build.boot}_{build.psram_type}
+
+## JTAG Adapter
+bpad_185.menu.JTAGAdapter.builtin=Integrated USB JTAG
+bpad_185.menu.JTAGAdapter.builtin.build.openocdscript=esp32s3-builtin.cfg
+bpad_185.menu.JTAGAdapter.builtin.build.copy_jtag_files=1
+bpad_185.menu.JTAGAdapter.default=Disabled
+bpad_185.menu.JTAGAdapter.default.build.openocdscript=esp32s3-builtin.cfg
+bpad_185.menu.JTAGAdapter.default.build.copy_jtag_files=0
+
+## PSRAM Menu
+bpad_185.menu.PSRAM.opi=OPI PSRAM (Enabled)
+bpad_185.menu.PSRAM.opi.build.defines=-DBOARD_HAS_PSRAM
+bpad_185.menu.PSRAM.opi.build.psram_type=opi
+bpad_185.menu.PSRAM.disabled=Disabled
+bpad_185.menu.PSRAM.disabled.build.defines=
+bpad_185.menu.PSRAM.disabled.build.psram_type=qspi
+
+## Flash Mode
+bpad_185.menu.FlashMode.qio=QIO 80MHz
+bpad_185.menu.FlashMode.qio.build.flash_mode=dio
+bpad_185.menu.FlashMode.qio.build.boot=qio
+bpad_185.menu.FlashMode.qio.build.boot_freq=80m
+bpad_185.menu.FlashMode.qio.build.flash_freq=80m
+bpad_185.menu.FlashMode.qio120=QIO 120MHz
+bpad_185.menu.FlashMode.qio120.build.flash_mode=dio
+bpad_185.menu.FlashMode.qio120.build.boot=qio
+bpad_185.menu.FlashMode.qio120.build.boot_freq=120m
+bpad_185.menu.FlashMode.qio120.build.flash_freq=80m
+bpad_185.menu.FlashMode.dio=DIO 80MHz
+bpad_185.menu.FlashMode.dio.build.flash_mode=dio
+bpad_185.menu.FlashMode.dio.build.boot=dio
+bpad_185.menu.FlashMode.dio.build.boot_freq=80m
+bpad_185.menu.FlashMode.dio.build.flash_freq=80m
+bpad_185.menu.FlashMode.opi=OPI 80MHz
+bpad_185.menu.FlashMode.opi.build.flash_mode=dout
+bpad_185.menu.FlashMode.opi.build.boot=opi
+bpad_185.menu.FlashMode.opi.build.boot_freq=80m
+bpad_185.menu.FlashMode.opi.build.flash_freq=80m
+
+## Flash Size
+bpad_185.menu.FlashSize.16M=16MB (128Mb)
+bpad_185.menu.FlashSize.16M.build.flash_size=16MB
+
+## Partition Scheme
+bpad_185.menu.PartitionScheme.bpad_16MB_4GB=bpad 16MB (4MB OTA0 / 4MB OTA1 / 8MB FAT)
+bpad_185.menu.PartitionScheme.bpad_16MB_4GB.build.partitions=bpad_16MB_4GB
+bpad_185.menu.PartitionScheme.bpad_16MB_4GB.upload.maximum_size=4145728
+bpad_185.menu.PartitionScheme.default_16MB=16MB (2x 6.5MB APP / 3.6MB SPIFFS)
+bpad_185.menu.PartitionScheme.default_16MB.build.partitions=default_16MB
+bpad_185.menu.PartitionScheme.default_16MB.upload.maximum_size=6553600
+bpad_185.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA / 1MB SPIFFS)
+bpad_185.menu.PartitionScheme.huge_app.build.partitions=huge_app
+bpad_185.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+
+## Loop/Events Core
+bpad_185.menu.LoopCore.1=Core 1
+bpad_185.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+bpad_185.menu.LoopCore.0=Core 0
+bpad_185.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+bpad_185.menu.EventsCore.1=Core 1
+bpad_185.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+bpad_185.menu.EventsCore.0=Core 0
+bpad_185.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+## USB Mode
+bpad_185.menu.USBMode.hwcdc=Hardware CDC and JTAG
+bpad_185.menu.USBMode.hwcdc.build.usb_mode=1
+bpad_185.menu.USBMode.default=USB-OTG (TinyUSB)
+bpad_185.menu.USBMode.default.build.usb_mode=0
+
+## CDC On Boot
+bpad_185.menu.CDCOnBoot.default=Enabled
+bpad_185.menu.CDCOnBoot.default.build.cdc_on_boot=1
+bpad_185.menu.CDCOnBoot.cdc=Enabled
+bpad_185.menu.CDCOnBoot.cdc.build.cdc_on_boot=1
+bpad_185.menu.CDCOnBoot.disabled=Disabled
+bpad_185.menu.CDCOnBoot.disabled.build.cdc_on_boot=0
+
+## MSC On Boot
+bpad_185.menu.MSCOnBoot.default=Disabled
+bpad_185.menu.MSCOnBoot.default.build.msc_on_boot=0
+bpad_185.menu.MSCOnBoot.msc=Enabled (Requires USB-OTG Mode)
+bpad_185.menu.MSCOnBoot.msc.build.msc_on_boot=1
+
+## DFU On Boot
+bpad_185.menu.DFUOnBoot.default=Disabled
+bpad_185.menu.DFUOnBoot.default.build.dfu_on_boot=0
+bpad_185.menu.DFUOnBoot.dfu=Enabled (Requires USB-OTG Mode)
+bpad_185.menu.DFUOnBoot.dfu.build.dfu_on_boot=1
+
+## Upload Mode
+bpad_185.menu.UploadMode.default=UART0 / Hardware CDC
+bpad_185.menu.UploadMode.default.upload.use_1200bps_touch=false
+bpad_185.menu.UploadMode.default.upload.wait_for_upload_port=false
+bpad_185.menu.UploadMode.cdc=USB-OTG CDC (TinyUSB)
+bpad_185.menu.UploadMode.cdc.upload.use_1200bps_touch=true
+bpad_185.menu.UploadMode.cdc.upload.wait_for_upload_port=true
+
+## CPU Frequency
+bpad_185.menu.CPUFreq.240=240MHz (WiFi)
+bpad_185.menu.CPUFreq.240.build.f_cpu=240000000L
+bpad_185.menu.CPUFreq.160=160MHz (WiFi)
+bpad_185.menu.CPUFreq.160.build.f_cpu=160000000L
+bpad_185.menu.CPUFreq.80=80MHz (WiFi)
+bpad_185.menu.CPUFreq.80.build.f_cpu=80000000L
+bpad_185.menu.CPUFreq.40=40MHz
+bpad_185.menu.CPUFreq.40.build.f_cpu=40000000L
+bpad_185.menu.CPUFreq.20=20MHz
+bpad_185.menu.CPUFreq.20.build.f_cpu=20000000L
+bpad_185.menu.CPUFreq.10=10MHz
+bpad_185.menu.CPUFreq.10.build.f_cpu=10000000L
+
+## Upload Speed
+bpad_185.menu.UploadSpeed.921600=921600
+bpad_185.menu.UploadSpeed.921600.upload.speed=921600
+bpad_185.menu.UploadSpeed.115200=115200
+bpad_185.menu.UploadSpeed.115200.upload.speed=115200
+bpad_185.menu.UploadSpeed.256000.windows=256000
+bpad_185.menu.UploadSpeed.256000.upload.speed=256000
+bpad_185.menu.UploadSpeed.230400.windows.upload.speed=256000
+bpad_185.menu.UploadSpeed.230400=230400
+bpad_185.menu.UploadSpeed.230400.upload.speed=230400
+bpad_185.menu.UploadSpeed.460800.linux=460800
+bpad_185.menu.UploadSpeed.460800.macosx=460800
+bpad_185.menu.UploadSpeed.460800.upload.speed=460800
+bpad_185.menu.UploadSpeed.512000.windows=512000
+bpad_185.menu.UploadSpeed.512000.upload.speed=512000
+
+## Core Debug Level
+bpad_185.menu.DebugLevel.none=None
+bpad_185.menu.DebugLevel.none.build.code_debug=0
+bpad_185.menu.DebugLevel.error=Error
+bpad_185.menu.DebugLevel.error.build.code_debug=1
+bpad_185.menu.DebugLevel.warn=Warn
+bpad_185.menu.DebugLevel.warn.build.code_debug=2
+bpad_185.menu.DebugLevel.info=Info
+bpad_185.menu.DebugLevel.info.build.code_debug=3
+bpad_185.menu.DebugLevel.debug=Debug
+bpad_185.menu.DebugLevel.debug.build.code_debug=4
+bpad_185.menu.DebugLevel.verbose=Verbose
+bpad_185.menu.DebugLevel.verbose.build.code_debug=5
+
+## Erase Flash
+bpad_185.menu.EraseFlash.none=Disabled
+bpad_185.menu.EraseFlash.none.upload.erase_cmd=
+bpad_185.menu.EraseFlash.all=Enabled
+bpad_185.menu.EraseFlash.all.upload.erase_cmd=-e

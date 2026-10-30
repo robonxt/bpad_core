@@ -86,6 +86,7 @@ def setup_version(version):
     src_boards = os.path.join(CUSTOM_FILES_DIR, "boards.txt")
     dst_boards = os.path.join(esp32_dir, "boards.txt")
     shutil.copy2(src_boards, dst_boards)
+    print("  Injected custom boards.txt")
 
     # Step 4: Inject custom variants
     print("Injecting custom variants...")
@@ -133,17 +134,26 @@ def setup_version(version):
 
 
 def main():
+    target_versions = [v for v in sys.argv[1:] if not v.startswith("-")]
+    if not target_versions:
+        target_versions = ["3.3.5"]
+    elif "all" in target_versions:
+        target_versions = VERSIONS
+
     print("=" * 60)
-    print("bpad core - Multi-Version Setup Script")
+    print(f"bpad core - Setup Script (Target: {', '.join(target_versions)})")
     print("=" * 60)
     print()
 
-    for v in VERSIONS:
+    for v in target_versions:
+        if v not in VERSIONS:
+            print(f"WARNING: Unknown version '{v}'. Known versions: {VERSIONS}")
+            continue
         setup_version(v)
 
     print("=" * 60)
     print("All setups complete!")
-    print("You can now run 'python build.py' to generate the release zips.")
+    print("You can now run 'python build.py [version]' to generate the release zips.")
     print("=" * 60)
 
 

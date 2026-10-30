@@ -68,15 +68,24 @@ def build_version(version):
 
 
 def main():
+    target_versions = [v for v in sys.argv[1:] if not v.startswith("-")]
+    if not target_versions:
+        target_versions = ["3.3.5"]
+    elif "all" in target_versions:
+        target_versions = VERSIONS
+
     print("=" * 60)
-    print("bpad core - Multi-Version Build Script")
+    print(f"bpad core - Build Script (Target: {', '.join(target_versions)})")
     print("=" * 60)
     print()
 
     os.makedirs(RELEASE_DIR, exist_ok=True)
     
     results = []
-    for v in VERSIONS:
+    for v in target_versions:
+        if v not in VERSIONS:
+            print(f"WARNING: Unknown version '{v}'. Known versions: {VERSIONS}")
+            continue
         res = build_version(v)
         results.append((v, res))
 
